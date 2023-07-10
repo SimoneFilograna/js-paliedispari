@@ -1,8 +1,11 @@
 let generatedNumber = document.getElementById("ia-number");
 const btn = document.getElementById("roll-button");
 const userInput = document.getElementById("user-number");
-let Sum= 0
+const selection = document.getElementById("selection");
+let winner = document.getElementById("message");
 
+
+let sum= 0
 
 btn.addEventListener("click", function(){
     let userNumberInput = parseInt(userInput.value);
@@ -22,7 +25,20 @@ btn.addEventListener("click", function(){
         console.log("***********somma*********");
         sum = userNumberInput + iaGenNumb;
         console.log(sum);
-
+        //Funzione per verificare se il numero è pari o dispari
+        checkNumber(sum);
+        if (selection.value === "pari" && checkNumber(sum) === true) {
+            winner.innerHTML = `La somma è ${sum} HAI VINTO!!!`;
+        } else if (selection.value === "pari" && checkNumber(sum)=== false) {
+            winner.innerHTML = `La somma è ${sum} HAI PERSO, RITENTA!!!`;
+        } else if (selection === "dispari" && checkNumber(sum)=== false) {
+            winner.innerHTML = `La somma è ${sum} HAI VINTO!!!`;
+        } else if (selection === "dispari" && checkNumber(sum)=== true) {
+            winner.innerHTML = `La somma è ${sum} HAI PERSO, RITENTA!!!`;
+        }
+        
+        
+        
     }
     
     
@@ -47,3 +63,11 @@ function IaGenerate(min, max){
     const randomNumber = Math.floor((Math.random() * max) + min);
     return randomNumber;   
 } 
+
+function checkNumber (num) {
+    if( num % 2 === 0){
+        return true;
+    } else {
+        return false;
+    }
+}
