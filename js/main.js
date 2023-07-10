@@ -35,9 +35,7 @@ btn.addEventListener("click", function(){
             winner.innerHTML = `La somma è ${sum} HAI VINTO!!!`;
         } else if (selection === "dispari" && checkNumber(sum)=== true) {
             winner.innerHTML = `La somma è ${sum} HAI PERSO, RITENTA!!!`;
-        }
-        
-        
+        }          
         
     }
     
