@@ -16,7 +16,50 @@
     </header>
 
     <main>
+        <div class="container">
+            <div class="row g-5 justify-content-center align-items-center">
+                <h1 class="text-center p-5">PARI O DISPARI CHI VINCERA' TRA TE E IL COMPUTER?</h1>
+                <div class="col-5">
+                    <div class="box m-5">
+                        <select class="form-select">
+                            <option selected >Pari o dispari?</option>
+                            <option value="pari" id="numero-pari">Pari</option>
+                            <option value="dispari" id="numero-dispari">Dispari</option>
+                        </select>
+                        <div>
+                            <label for="user-number" class="form-label"></label>
+                            <input type="text" name="user-namber" id="user-number" class="form-control" placeholder="Inserisci un numbero da 1 a 5" value="">
+                        </div>
 
+
+                        
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="box border">
+                        <div>
+                            <p class="fw-semibold fs-5 p-3">Numero scelto dall'IA: <span id="ia-number" value=""></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center align-items-center">
+                <div class="col-1">
+                    <div class="box">
+                        <button class="btn btn-danger px-5 py-2 rounded" id="roll-button">RoLL</button>               
+                    </div>                
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="box">
+                        <p id="message"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
     </main>
     <footer>
 
