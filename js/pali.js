@@ -6,7 +6,11 @@ const resultTest = document.getElementById("result");
 btn.addEventListener("click", function(){
     const word = userInput.value;
     console.log(word);
-    checkWord(word);
+    if (checkWord(word) === true){
+        resultTest.innerHTML = "COMPLIMENTI LA PAROLA E' PALINDROMA"
+    } else {
+        resultTest.innerHTML = "MI SPIACE LA PAROLA NON E' PALINDROMA"
+    }
 })
 
 
@@ -20,11 +24,9 @@ function checkWord (casualWord) {
     let reverseArray= newWord.reverse();
     console.log(reverseArray);
     newReverseWord = reverseArray.join("");
-    if (casualWord === newReverseWord) {
-        resultTest.innerHTML = "COMPLIMENTI LA PAROLA E' PALINDROMA"
+    if (casualWord === newReverseWord) {        
         return true;
-    } else {
-        resultTest.innerHTML = "MI SPIACE LA PAROLA NON E' PALINDROMA"
+    } else {        
         return false;
     }    
     } 
