@@ -5,16 +5,16 @@ const selection = document.getElementById("selection");
 let winner = document.getElementById("message");
 
 
-let sum= 0
+let sum = 0
 
-btn.addEventListener("click", function(){
+btn.addEventListener("click", function () {
     let userNumberInput = parseInt(userInput.value);
-    
-    if (userNumberInput < 0 || userNumberInput > 5 ){
+
+    if (userNumberInput < 0 || userNumberInput > 5) {
         alert("Scrivi un numero compreso tra 1 e 5")
     } else {
         //generazione numero ia 
-        generatedNumber.value = IaGenerate(1, 5); 
+        generatedNumber.value = IaGenerate(1, 5);
         let iaGenNumb = parseInt(generatedNumber.value);
 
         console.log("*********** ia gen ************");
@@ -31,9 +31,9 @@ btn.addEventListener("click", function(){
             winner.innerHTML = `La somma è ${sum} HAI VINTO!!!`;
         } else {
             winner.innerHTML = `La somma è ${sum} HAI PERSO, RITENTA!!!`;
-        }                  
-    }    
-})  
+        }
+    }
+})
 
 
 /**
@@ -42,10 +42,10 @@ btn.addEventListener("click", function(){
  * @param {number} max;
  * @returns {number};
  */
-function IaGenerate(min, max){
+function IaGenerate(min, max) {
     const randomNumber = Math.floor((Math.random() * max) + min);
-    return randomNumber;   
-} 
+    return randomNumber;
+}
 
 
 
@@ -54,8 +54,8 @@ function IaGenerate(min, max){
  * @param {boolean} num;
  * @returns {boolean};
  */
-function checkNumber (num) {
-    if( num % 2 === 0){
+function checkNumber(num) {
+    if (num % 2 === 0) {
         return true;
     } else {
         return false;
