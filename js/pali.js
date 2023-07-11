@@ -1,5 +1,5 @@
 const btn = document.getElementById("btn");
-const userInput= document.getElementById("my-word");
+const userInput = document.getElementById("my-word");
 const resultTest = document.getElementById("result");
 
 
@@ -34,7 +34,7 @@ function checkWord(casualWord) {
     } else {
         return false;
     }
-} 
+}
 
 
 
