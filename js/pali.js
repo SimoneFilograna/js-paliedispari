@@ -17,7 +17,11 @@ btn.addEventListener("click", function(){
 
 
 
-
+/**
+ * 
+ * @param {boolean} casualWord ;
+ * @returns {boolean};
+ */
 function checkWord (casualWord) {
     const newWord = casualWord.split("");
     console.log(newWord);
