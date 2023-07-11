@@ -26,14 +26,10 @@ btn.addEventListener("click", function(){
         sum = userNumberInput + iaGenNumb;
         console.log(sum);
         //Funzione per verificare se il numero è pari o dispari
-        checkNumber(sum);
-        if (selection.value === "pari" && checkNumber(sum) === true) {
+        let sumNum = checkNumber(sum);
+        if ((selection.value === "pari" && sumNum === true) || (selection.value === "dispari" && checkNumber(sum) === false)) {
             winner.innerHTML = `La somma è ${sum} HAI VINTO!!!`;
-        } else if (selection.value === "pari" && checkNumber(sum) === false) {
-            winner.innerHTML = `La somma è ${sum} HAI PERSO, RITENTA!!!`;
-        } else if (selection.value === "dispari" && checkNumber(sum) === false) {
-            winner.innerHTML = `La somma è ${sum} HAI VINTO!!!`;
-        } else if (selection.value === "dispari" && checkNumber(sum) === true) {
+        } else {
             winner.innerHTML = `La somma è ${sum} HAI PERSO, RITENTA!!!`;
         }                  
     }    
