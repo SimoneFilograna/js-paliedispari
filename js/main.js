@@ -29,11 +29,11 @@ btn.addEventListener("click", function(){
         checkNumber(sum);
         if (selection.value === "pari" && checkNumber(sum) === true) {
             winner.innerHTML = `La somma è ${sum} HAI VINTO!!!`;
-        } else if (selection.value === "pari" && checkNumber(sum)=== false) {
+        } else if (selection.value === "pari" && checkNumber(sum) === false) {
             winner.innerHTML = `La somma è ${sum} HAI PERSO, RITENTA!!!`;
-        } else if (selection === "dispari" && checkNumber(sum)=== false) {
+        } else if (selection.value === "dispari" && checkNumber(sum) === false) {
             winner.innerHTML = `La somma è ${sum} HAI VINTO!!!`;
-        } else if (selection === "dispari" && checkNumber(sum)=== true) {
+        } else if (selection.value === "dispari" && checkNumber(sum) === true) {
             winner.innerHTML = `La somma è ${sum} HAI PERSO, RITENTA!!!`;
         }                  
     }    
